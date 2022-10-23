@@ -2,10 +2,11 @@ import { accordion, changeColor } from './animation';
 import { $, $$ } from './utils';
 
 const menu = $('.menu_content_sm');
-const mainWrapper = $('body');
+const mainWrapper = $('.wrapper');
 
 $('.menu_button')
   ?.addEventListener('click', function(){
+
     (this as Element).classList.toggle('animated-menu');
     menu && accordion(menu);
   });
