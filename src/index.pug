@@ -7,7 +7,7 @@ block content
   nav
     div.nav-wrapper.flex.flex-center.flex-between
       a(href='#')
-        div.image-container.button-svg
+        div.image-container.button-svg.image-invert
           img(src="./assets/chip.svg", alt="logo", lazy)
       div.menu_button.flex.flex-column.base-button
         div
@@ -24,9 +24,9 @@ block content
           h3 
             a.button-alternative(href='#proyects') Proyectos
       div.change-theme
-        div#sun.image-container.button-svg
+        div#sun.image-container.button-svg.image-invert
           img(src="./assets/sun.svg", alt="change color")
-        div#moon.image-container.hidden.button-svg
+        div#moon.image-container.hidden.button-svg.image-invert
           img(src="./assets/moon.svg", alt="change color")
     ul.menu_content_sm.flex-column.hidden
       li.button  
@@ -38,4 +38,5 @@ block content
       li.button  
         h3 
           a(href='#proyects') Proyectos
-  include ./views/presentation.pug
+  div.wrapper-content
+    include ./views/presentation.pug

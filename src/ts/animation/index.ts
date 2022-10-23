@@ -16,6 +16,8 @@ export function changeColor(container?: Element){
 
   if(!classList) return;
 
-  classList.toggle('dark');
+  !classList.contains('dark-init') && classList.toggle('dark');
+
+  classList.remove('dark-init');
   classList.toggle('light');
 }

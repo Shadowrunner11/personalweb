@@ -4,16 +4,37 @@
 @import './buttons.sass' 
 @import ./menu.sass
 
+$transition: global.$base-time*0.8
+
 .wrapper
   min-height: 100vh
 
-.dark
+.wrapper-content
+  max-width: 1200
+  margin: auto
+
+.dark-init
   color: global.$text-primary-dark
   background: global.$background-dark
+
+.dark
+  @extend .dark-init
+  animation: light-to-dark $transition ease-in
 
 .light
   color: global.$text-primary
   background: global.$background
+  animation: dark-to-light $transition ease-in
+
+@keyframes dark-to-light
+  0%
+    color: global.$text-primary-dark
+    background: global.$background-dark
+
+@keyframes light-to-dark
+  0%
+    color: global.$text-primary
+    background: global.$background
 
 .nav-wrapper
   z-index: 10000000
@@ -41,11 +62,58 @@
 .image-container
   height: 100%
   img
-    height: 100%
-    filter: invert(90%)
+    width: 100%
+
+.image-invert
+  filter: invert(90%)
 
 nav
   color: global.$text-primary-dark
   z-index: 10000000000000
   position: sticky
   top: 0
+
+.big-font-75
+  font-weight: 600
+  font-size: 2.5rem
+
+.typeface-mon
+  font-size: 1.5rem
+  font-family: 'Courier New', Courier, monospace
+  padding: global.$spacing
+  margin-top: global.$spacing*2
+
+.presentation
+  @extend .flex
+  @extend .flex-center
+  @extend .flex-column
+  gap: global.$spacing*3
+
+header
+  height: 80vh
+
+header .image-container > img
+  width: 50%
+
+header .image-container
+  height: 50%
+
+@media only screen and (min-width: 768px)
+  .presentation
+    flex-direction: row
+  header > div:first-child
+    width: 60%
+  header > div:nth-child(2)
+    width: 25%
+  header .image-container > img
+    width: 100%
+  .big-font-75
+    transform: scale(1.1)
+
+
+.circle
+  border-radius: 50%
+
+.gray-scale
+  filter: sepia(100%)
+  

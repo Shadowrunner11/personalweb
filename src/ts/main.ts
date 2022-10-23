@@ -2,7 +2,7 @@ import { accordion, changeColor } from './animation';
 import { $, $$ } from './utils';
 
 const menu = $('.menu_content_sm');
-const mainWrapper = $('.wrapper');
+const mainWrapper = $('body');
 
 $('.menu_button')
   ?.addEventListener('click', function(){
