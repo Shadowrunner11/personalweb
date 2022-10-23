@@ -1,0 +1,51 @@
+@use './globals' as global
+@import './reset.sass'
+@import './animation.sass'
+@import './buttons.sass' 
+@import ./menu.sass
+
+.wrapper
+  min-height: 100vh
+
+.dark
+  color: global.$text-primary-dark
+  background: global.$background-dark
+
+.light
+  color: global.$text-primary
+  background: global.$background
+
+.nav-wrapper
+  z-index: 10000000
+  background: global.$primary-color
+  height: 60
+  padding: global.$spacing*2
+
+.hidden
+  display: none
+
+.flex
+  display: flex
+  gap: global.$spacing
+
+.flex-column
+  flex-direction: column
+
+.flex-center
+  align-items: center
+  justify-content: center
+
+.flex-between
+  justify-content: space-between
+
+.image-container
+  height: 100%
+  img
+    height: 100%
+    filter: invert(90%)
+
+nav
+  color: global.$text-primary-dark
+  z-index: 10000000000000
+  position: sticky
+  top: 0

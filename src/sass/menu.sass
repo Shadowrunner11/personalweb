@@ -1,0 +1,34 @@
+@use './globals' as global
+
+
+div.menu_button
+  width: global.$spacing*4
+  gap: calc(global.$spacing/2)
+  div
+    height: global.$spacing
+    background: global.$accent-color
+    border-radius: global.$spacing
+
+ul.menu_content_md
+  display: none
+  gap: global.$spacing*2
+
+
+.menu_content_sm
+  background:  darken(global.$primary-color, 10%)
+  position: absolute
+  width: 100%
+  display: flex
+  z-index: -1
+  align-items: center
+  justify-content: center
+  li
+    padding: global.$spacing
+
+@media only screen and (min-width: 768px)
+  .menu_content_sm
+    display: none
+  ul.menu_content_md
+    display: flex
+  div.menu_button
+    display: none

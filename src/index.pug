@@ -1,0 +1,41 @@
+extends ./views/main.pug
+
+block scripts
+  script(src="./ts/main.ts", defer, type='module') 
+
+block content
+  nav
+    div.nav-wrapper.flex.flex-center.flex-between
+      a(href='#')
+        div.image-container.button-svg
+          img(src="./assets/chip.svg", alt="logo", lazy)
+      div.menu_button.flex.flex-column.base-button
+        div
+        div
+        div
+      ul.menu_content_md.flex.hidden
+        li.button-alternative 
+          h3
+            a.button-alternative(href='#contact') Contacto
+        li.base-button
+          h3 
+            a.button-alternative(href='#skills') Habilidades
+        li.base-button 
+          h3 
+            a.button-alternative(href='#proyects') Proyectos
+      div.change-theme
+        div#sun.image-container.button-svg
+          img(src="./assets/sun.svg", alt="change color")
+        div#moon.image-container.hidden.button-svg
+          img(src="./assets/moon.svg", alt="change color")
+    ul.menu_content_sm.flex-column.hidden
+      li.button  
+        h3
+          a(href='#contact') Contacto
+      li.button  
+        h3 
+          a(href='#skills') Habilidades
+      li.button  
+        h3 
+          a(href='#proyects') Proyectos
+  include ./views/presentation.pug

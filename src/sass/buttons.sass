@@ -1,0 +1,24 @@
+@use './globals' as g
+
+.base-button
+  cursor: pointer
+  text-align: center
+
+.button-svg
+  @extend .base-button
+  &:hover
+    filter: contrast(50%)
+    transform: scale(1.1)
+
+
+.button
+  @extend .base-button
+  width: 100%
+  &:hover
+    background: lighten(g.$primary-color, 10%)
+
+.button-alternative
+  @extend .base-button
+  width: 100%
+  &:hover
+    color: g.$accent-color

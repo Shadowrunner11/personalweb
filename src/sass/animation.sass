@@ -1,0 +1,72 @@
+@use './globals' as g
+
+$custom-time: g.$base-time*0.6
+
+.accordion-in
+  animation: accordionA $custom-time ease-in-out
+
+.accordion-out
+  opacity: 0
+  transform: translateY(-60px)
+  animation: accordionB $custom-time ease-in-out
+
+@keyframes accordionA
+  0%
+    opacity: 0
+    transform: translateY(-60px)
+
+@keyframes accordionB
+  0%
+    transform: translateY(0)
+    opacity: 1
+    
+
+.scrolling-words-box
+  height: 140
+  overflow: hidden
+  ul
+    transform: translateY(-80%)
+    animation: scrollUp 10s infinite
+    li
+      font-weight: bold
+      height: 140
+      color: #2491ea
+      place-items: center
+      display: grid
+
+@keyframes scrollUp
+  25%
+    transform: translateY(-80%)
+  30%, 45%
+    transform: translateY(-60%)
+  50%, 60%
+    transform: translateY(-40%)
+  65%, 75%
+    transform: translateY(-20%)
+  90%, 100%
+    transform: translateY(0%)
+
+.animated-menu
+  height: 100%
+  & > div:first-child
+    transform: translateY(150%) rotate(45deg)
+    animation: top $custom-time ease-in-out
+  & > div:nth-child(2)
+    transform: scale(0)
+    animation: middle $custom-time ease-in-out
+  & > div:nth-child(3)
+    transform: translateY(-150%) rotate(135deg)
+    animation: top $custom-time ease-in-out
+
+@keyframes middle
+  0%
+    transform: scale(1)
+
+@keyframes top
+  0%
+    transform: rotate(0)
+
+
+
+
+    
