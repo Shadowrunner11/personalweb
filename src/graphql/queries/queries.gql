@@ -1,0 +1,28 @@
+query getProjects{
+  query getProjects{
+    thumbnail
+    links {
+      url
+      label
+      description
+    }
+    introspeccion{
+      languages {
+        label
+        icon
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+query asdasd{
+  query asdsad{
+    tya
+  }
+}
