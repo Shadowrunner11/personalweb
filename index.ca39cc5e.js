@@ -535,7 +535,7 @@ function hmrAcceptRun(bundle, id) {
 var _animation = require("./animation");
 var _utils = require("./utils");
 const menu = (0, _utils.$)(".menu_content_sm");
-const mainWrapper = (0, _utils.$)(".wrapper");
+const mainWrapper = (0, _utils.$)("body");
 (0, _utils.$)(".menu_button")?.addEventListener("click", function() {
     this.classList.toggle("animated-menu");
     menu && (0, _animation.accordion)(menu);
@@ -562,7 +562,8 @@ function accordion(container) {
 function changeColor(container) {
     const classList = container?.classList;
     if (!classList) return;
-    classList.toggle("dark");
+    !classList.contains("dark-init") && classList.toggle("dark");
+    classList.remove("dark-init");
     classList.toggle("light");
 }
 

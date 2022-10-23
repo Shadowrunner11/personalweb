@@ -133,7 +133,7 @@ a, a:visited {
 }
 
 .button-alternative:hover {
-  color: #9ddd43;
+  color: #6b4997;
 }
 
 div.menu_button {
@@ -143,7 +143,7 @@ div.menu_button {
 
 div.menu_button div {
   height: 8px;
-  background: #9ddd43;
+  background: #6b4997;
   border-radius: 8px;
 }
 
@@ -184,14 +184,38 @@ ul.menu_content_md {
   min-height: 100vh;
 }
 
-.dark {
+.wrapper-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dark-init, .dark {
   color: #dfdfdf;
   background: #202020;
+}
+
+.dark {
+  animation: .8s ease-in light-to-dark;
 }
 
 .light {
   color: #111;
   background: #dfdfdf;
+  animation: .8s ease-in dark-to-light;
+}
+
+@keyframes dark-to-light {
+  0% {
+    color: #dfdfdf;
+    background: #202020;
+  }
+}
+
+@keyframes light-to-dark {
+  0% {
+    color: #111;
+    background: #dfdfdf;
+  }
 }
 
 .nav-wrapper {
@@ -205,16 +229,16 @@ ul.menu_content_md {
   display: none;
 }
 
-.flex {
+.flex, .presentation {
   gap: 8px;
   display: flex;
 }
 
-.flex-column {
+.flex-column, .presentation {
   flex-direction: column;
 }
 
-.flex-center {
+.flex-center, .presentation {
   justify-content: center;
   align-items: center;
 }
@@ -228,7 +252,10 @@ ul.menu_content_md {
 }
 
 .image-container img {
-  height: 100%;
+  width: 100%;
+}
+
+.image-invert {
   filter: invert(90%);
 }
 
@@ -237,6 +264,64 @@ nav {
   z-index: 2147483647;
   position: sticky;
   top: 0;
+}
+
+.big-font-75 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.typeface-mon {
+  margin-top: 16px;
+  padding: 8px;
+  font-family: Courier New, Courier, monospace;
+  font-size: 1.5rem;
+}
+
+.presentation {
+  gap: 24px;
+}
+
+header {
+  height: 80vh;
+}
+
+header .image-container > img {
+  width: 50%;
+}
+
+header .image-container {
+  height: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .presentation {
+    flex-direction: row;
+  }
+
+  header > div:first-child {
+    width: 60%;
+  }
+
+  header > div:nth-child(2) {
+    width: 25%;
+  }
+
+  header .image-container > img {
+    width: 100%;
+  }
+
+  .big-font-75 {
+    transform: scale(1.1);
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.gray-scale {
+  filter: sepia();
 }
 
 /*# sourceMappingURL=index.dcc9ba11.css.map */
