@@ -1,8 +1,13 @@
 import { accordion, changeColor } from './animation';
+import ProyectController from './controller/Proyects.controller';
+import HTTPClient from './service/HTTPClient';
 import { $, $$ } from './utils';
 
 const menu = $('.menu_content_sm');
 const mainWrapper = $('.wrapper');
+
+const client = new HTTPClient('https://rickandmortyapi.com');
+const controler = new ProyectController(client);
 
 $('.menu_button')
   ?.addEventListener('click', function(){
@@ -18,3 +23,7 @@ $('.change-theme')
     });
     mainWrapper && changeColor(mainWrapper);
   });
+
+$('.prueba')?.addEventListener('click', ()=>{
+  controler.getTestLibrary();
+});
