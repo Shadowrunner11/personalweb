@@ -2,7 +2,12 @@
   "name": "personalweb",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.pug --port 2501",
+    "build": "parcel build src/index.pug --public-url ./"
+  },
   "devDependencies": {
+    "@parcel/transformer-graphql": "2.7.0",
     "@parcel/transformer-pug": "2.7.0",
     "@parcel/transformer-sass": "2.7.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",

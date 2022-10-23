@@ -672,6 +672,15 @@
     browserslist "^4.6.6"
     nullthrows "^1.1.1"
 
+"@parcel/transformer-graphql@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-graphql/-/transformer-graphql-2.7.0.tgz#d9c206fc18371d7814e6c84b5db1c93578d671af"
+  integrity sha512-M+3+NuBUH0hrWose8baEsUVp/8db+i6vXGuKcYY38ev/ljvsGqnEMB30FAgYyVbbklP/vLNUgGHIALHQvGpJnw==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    graphql "^15.0.0"
+    graphql-import-macro "^1.0.0"
+
 "@parcel/transformer-html@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-html/-/transformer-html-2.7.0.tgz#5397a924fea683ef2c345f36f99f67f0181d6967"
@@ -2491,6 +2500,18 @@ grapheme-splitter@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
+
+graphql-import-macro@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-import-macro/-/graphql-import-macro-1.0.0.tgz#987c62bdebf5f26c77bb0e67a5f67afd7d0b5f42"
+  integrity sha512-YK4g6iP60H++MpP93tb0VwOg7aM5iIC0hdSQKTrEDANeLWf0KFAT9dwlBeMDrhY+jcW7qsAEDtaw58cgVnQXAw==
+  dependencies:
+    graphql "^15.0.0"
+
+graphql@^15.0.0:
+  version "15.8.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.8.0.tgz#33410e96b012fa3bdb1091cc99a94769db212b38"
+  integrity sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==
 
 handlebars@^4.0.14, handlebars@^4.5.3:
   version "4.7.7"
