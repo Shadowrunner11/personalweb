@@ -1,5 +1,5 @@
-query getProjects{
-  query getProjects{
+query getProjects($a: String){
+  query getProjects(a: $a){
     thumbnail
     links {
       url
@@ -15,14 +15,3 @@ query getProjects{
   }
 }
 
-
-
-
-
-
-
-query asdasd{
-  query asdsad{
-    tya
-  }
-}

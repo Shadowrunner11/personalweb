@@ -2,9 +2,16 @@
   "name": "personalweb",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.pug"
+  },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.13.7",
+    "@graphql-codegen/client-preset": "^1.1.0",
+    "@parcel/transformer-graphql": "2.7.0",
     "@parcel/transformer-pug": "2.7.0",
     "@parcel/transformer-sass": "2.7.0",
+    "@types/throttle-debounce": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "eslint": "^8.26.0",
@@ -12,5 +19,10 @@
     "parcel": "^2.7.0",
     "typescript": "^4.8.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
+    "graphql-tag": "^2.12.6",
+    "throttle-debounce": "^5.0.0"
+  }
 }

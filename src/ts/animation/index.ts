@@ -12,7 +12,6 @@ export function accordion(container?: Element){
 
 
 export function changeColor(container?: Element){
-  console.log('🚀 ~ file: index.ts ~ line 15 ~ changeColor ~ container', container);
   const classList  =  container?.classList;
 
   if(!classList) return;
