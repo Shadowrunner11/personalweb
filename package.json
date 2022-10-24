@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.pug"
+    "start": "parcel src/index.pug",
+    "build": "rm -rf ./dist && parcel build src/index.pug --public-url ./"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^2.13.7",
